@@ -1,0 +1,4 @@
+allinbotServiceAccountCredentials.json
+.idea/
+*/__pycache__/
+*.pyc
