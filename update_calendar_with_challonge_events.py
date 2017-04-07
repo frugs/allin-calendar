@@ -3,7 +3,7 @@ import httplib2
 import datetime
 from apiclient import discovery
 from oauth2client.service_account import ServiceAccountCredentials
-import challonge
+import challongeservice
 import dateutil.parser
 
 
@@ -11,7 +11,7 @@ SCOPES = ['https://www.googleapis.com/auth/calendar']
 APPLICATION_NAME = 'Challonge Event updater'
 CREDENTIALS_FILE_NAME = 'allinbotServiceAccountCredentials.json'
 CHALLONGE_API_KEY = os.getenv('CHALLONGE_API_KEY', '')
-TRACKED_TOURNAMENT_SUBDOMAINS = ["proxytempest", "thenydus"]
+TRACKED_TOURNAMENT_SUBDOMAINS = ["proxytempest", "thenydus", "all-inspiration"]
 CALENDAR_ID = "3om5b2vfubpugkf3vr6fahh01k@group.calendar.google.com"
 
 
@@ -24,7 +24,7 @@ def create_calendar_service():
 
 def main():
     calendar_service = create_calendar_service()
-    challonge_service = challonge.create_service(CHALLONGE_API_KEY)
+    challonge_service = challongeservice.create_service(CHALLONGE_API_KEY)
 
     now = datetime.datetime.now(datetime.timezone.utc)
 
