@@ -11,7 +11,7 @@ SCOPES = ['https://www.googleapis.com/auth/calendar']
 APPLICATION_NAME = 'Challonge Event updater'
 CREDENTIALS_FILE_NAME = 'allinbotServiceAccountCredentials.json'
 CHALLONGE_API_KEY = os.getenv('CHALLONGE_API_KEY', '')
-TRACKED_TOURNAMENT_SUBDOMAINS = ["proxytempest", "thenydus", "all-inspiration"]
+TRACKED_TOURNAMENT_SUBDOMAINS = ["proxytempest", "thenydus", "all-inspiration", "passioncraft"]
 CALENDAR_ID = "3om5b2vfubpugkf3vr6fahh01k@group.calendar.google.com"
 
 
