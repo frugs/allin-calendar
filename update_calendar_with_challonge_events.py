@@ -35,8 +35,9 @@ def main():
             tournament["tournament"]
             for tournament
             in tournaments
-            if tournament["tournament"]["state"] == "pending"
-            and dateutil.parser.parse(tournament["tournament"]["start_at"]) > now])
+            if tournament["tournament"]["state"] == "pending" and
+            tournament["tournament"]["start_at"] and
+            dateutil.parser.parse(tournament["tournament"]["start_at"]) > now])
 
     for tournament in upcoming_tournaments:
         start_time = dateutil.parser.parse(tournament["start_at"])
